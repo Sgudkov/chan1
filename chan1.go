@@ -14,7 +14,7 @@ func main() {
 	//and write to the channel
 	go runchannels(chan1)
 
-	//Read from the channel and print the results123
+	//Read from the channel and print the results
 	go getNumber(chan1)
 
 	time.Sleep(2 * time.Second)
