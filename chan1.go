@@ -22,7 +22,7 @@ func main() {
 }
 
 func runchannels(in chan<- uint32) {
-	for i := 0; i < 500; i++ {
+	for i := 0; i < 100; i++ {
 		val := i
 		in <- hash(fmt.Sprint(val))
 		fmt.Println("Write to chan2", val)
