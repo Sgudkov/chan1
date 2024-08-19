@@ -25,7 +25,7 @@ func runchannels(in chan<- uint32) {
 	for i := 0; i < 100; i++ {
 		val := i
 		in <- hash(fmt.Sprint(val))
-		fmt.Println("Write to chan2", val)
+		fmt.Println("Write to chan", val)
 	}
 
 	close(in)
@@ -33,7 +33,7 @@ func runchannels(in chan<- uint32) {
 
 func getNumber(in <-chan uint32) {
 	for val := range in {
-		fmt.Println("get from chan1", val)
+		fmt.Println("Get from chan", val)
 	}
 
 }
